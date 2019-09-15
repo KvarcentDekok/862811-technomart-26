@@ -103,7 +103,77 @@
 
   <section>
     <h2>Фильтр:</h2>
-    <form></form>
+    <form method="post" action="https://echo.htmlacademy.ru">
+      <fieldset>
+        <legend>Цена:</legend>
+        <div></div>
+        <div>
+          <label>
+            <input type="number" name="price-from" value="0">
+            От
+          </label>
+          —
+          <label>
+            <input type="number" name="price-to" value="30000">
+            До
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Производители:</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="checkbox" name="manufacturers" value="Bosch" checked>
+              Bosch
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="manufacturers" value="Интерскол">
+              Интерскол
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="manufacturers" value="Makita" checked>
+              Makita
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="manufacturers" value="DeWalt">
+              DeWalt
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="checkbox" name="manufacturers" value="Hitachi">
+              Hitachi
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Питание:</legend>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="supply" value="Аккумуляторные" checked>
+              Аккумуляторные
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="supply" value="Сетевые">
+              Сетевые
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+
+      <button type="submit">Показать</button>
+    </form>
   </section>
 
   <section>
@@ -302,13 +372,13 @@
       <h2>Социальные кнопки</h2>
       <ul>
         <li>
-          <a href="#">ВК</a>
+          <a href="#">Техномарт в ВК</a>
         </li>
         <li>
-          <a href="#">Facebook</a>
+          <a href="#">Техномарт в Facebook</a>
         </li>
         <li>
-          <a href="#">Instagram</a>
+          <a href="#">Техномарт в Instagram</a>
         </li>
       </ul>
     </section>
@@ -322,5 +392,20 @@
     </p>
   </div>
 </footer>
+
+<aside>
+  <p>Товар добавлен в корзину!</p>
+
+  <ul>
+    <li>
+      <a href="#">Оформить заказ</a>
+    </li>
+    <li>
+      <button type="button">Продолжить покупки</button>
+    </li>
+  </ul>
+
+  <button type="button">Закрыть</button>
+</aside>
 </body>
 </html>
