@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum"),
+  url(../fonts/cuprum.woff) format("woff"),
+  url(../fonts/cuprum.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum Bold"),
+  url(../fonts/cuprumbold.woff) format("woff"),
+  url(../fonts/cuprumbold.woff2) format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum Bold Italic"),
+  url(../fonts/cuprumbolditalic.woff) format("woff"),
+  url(../fonts/cuprumbolditalic.woff2) format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Cuprum";
+  src: local("Cuprum Italic"),
+  url(../fonts/cuprumitalic.woff) format("woff"),
+  url(../fonts/cuprumitalic.woff2) format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+  url(../fonts/ptsans.woff) format("woff"),
+  url(../fonts/ptsans.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans Bold"),
+  url(../fonts/ptsansbold.woff) format("woff"),
+  url(../fonts/ptsansbold.woff2) format("woff2");
+  font-weight: bold;
+}
+
+
+img {
+  width: 100%;
+}
+
+
+.main-header {
+  font-family: Cuprum, Arial, sans-serif;
+}
+
+.top-menu {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 18px;
+  
+  background-color: #293449;
+}
+
+.top-menu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo {
+  height: 47px;
+  width: 220px;
+
+  display: block;
+
+  font-size: 1px;
+  color: transparent;
+
+  background: #EE3643 url("../img/logo-technomart.svg") no-repeat 50%;
+}
+
+.nav-search input {
+  background-color: transparent;
+  border: none;
+}
