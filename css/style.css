@@ -229,6 +229,19 @@
   background-color: #ffffff;
 }
 
+.breadcrumbs {
+  list-style: none;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.breadcrumbs-link {
+  color: #000000;
+  text-decoration: none;
+}
+
 .promo-item {
   font-weight: bold;
   font-size: 24px;
@@ -331,6 +344,17 @@
 
 .list-section ul {
   list-style: none;
+}
+
+.page-title {
+  font-family: Cuprum, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  color: #32425C;
+  text-transform: uppercase;
+
+  background-color: #F2F6F8;
 }
 
 .title-box {
