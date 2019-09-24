@@ -55,6 +55,14 @@ img {
   width: 100%;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 
 .main-header {
   font-family: Cuprum, Arial, sans-serif;
@@ -64,7 +72,7 @@ img {
   color: #ffffff;
   font-size: 17px;
   line-height: 18px;
-  
+
   background-color: #293449;
 }
 
@@ -73,7 +81,7 @@ img {
   text-decoration: none;
 }
 
-.logo {
+.top-menu .logo {
   height: 47px;
   width: 220px;
 
@@ -89,3 +97,80 @@ img {
   background-color: transparent;
   border: none;
 }
+
+.checkout {
+  background-color: #669933;
+}
+
+.head {
+  background-color: #f3f7f8;
+}
+
+.head-description {
+  font-family: Cuprum, Arial, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: #ee3643;
+}
+
+.head-center {
+  text-align: center;
+}
+
+.head-phone {
+  font-size: 21px;
+  line-height: 21px;
+  color: #ee3643;
+  text-decoration: none;
+}
+
+.head-address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.enter ul {
+  list-style: none;
+}
+
+.head-button {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+
+  background-color: #ffffff;
+}
+
+.profile ul {
+  list-style: none;
+}
+
+.head-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+}
+
+.main-nav {
+  background-color: #32425c;
+}
+
+.main-nav ul {
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.main-content {
+  background-color: #ffffff;
+}
+
+
