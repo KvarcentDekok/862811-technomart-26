@@ -342,6 +342,31 @@
   background-color: #BA2732;
 }
 
+.button-secondary,
+.pagination-link {
+  border: 1px solid #E5E5E5;
+  border-radius: 2px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ffffff;
+}
+
+.button-secondary:hover,
+.pagination-link:hover {
+  border-color: #BDC6CA;
+}
+
+.button-secondary:active,
+.pagination-link:active {
+  border-color: #ee3643;
+}
+
 .list-section ul {
   list-style: none;
 }
@@ -361,6 +386,12 @@
   background-color: #F9F5F0;
 }
 
+.sub-block {
+  border-radius: 3px;
+
+  background-color: #F7F3EC;
+}
+
 .section-title {
   font-family: Cuprum, Arial, sans-serif;
   font-weight: normal;
@@ -370,8 +401,108 @@
   text-transform: uppercase;
 }
 
+.section-subtitle {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
 .title-box .section-title {
   color: #32425C;
+}
+
+.form ul {
+  list-style: none;
+}
+
+.form-field {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.field-title {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.text-range {
+  border-radius: 3px;
+
+  color: transparent;
+
+  background-color: #F7F3EC;
+}
+
+.text-range input {
+  border: none;
+
+  text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+
+  background-color: transparent;
+}
+
+.custom-checkbox,
+.custom-radio {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.custom-checkbox input:disabled,
+.custom-radio input:disabled {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.sort-parameters {
+  list-style: none;
+}
+
+.parameter-btn {
+  border: none;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  text-decoration: underline #ee3643 dotted;
+
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.parameter-btn:hover,
+.parameter-btn.active:hover {
+  color: #000000;
+  text-decoration: underline #ee3643 solid;
+}
+
+.parameter-btn.active {
+  color: #EE3643;
+  text-decoration: none;
+}
+
+.sort-type {
+  list-style: none;
+}
+
+.type-btn {
+  border: none;
+
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .card {
@@ -467,6 +598,22 @@
 
 .map {
   text-decoration: none;
+}
+
+.pagination {
+  list-style: none;
+}
+
+.pagination-link:not([href]) {
+  border: none;
+
+  color: #ffffff;
+
+  background-color: #ee3643;
+}
+
+.about-page {
+  background-color: #F4F8F9;
 }
 
 .main-footer {
