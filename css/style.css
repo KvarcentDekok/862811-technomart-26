@@ -61,7 +61,7 @@
 
 
 .main-header {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
 }
 
 .top-menu {
@@ -90,6 +90,7 @@
   text-decoration: none;
 
   background: #EE3643 url("../img/logo-technomart.svg") no-repeat 50%;
+  box-shadow: 0 5px 0 0 #B52933;
 }
 
 .logo:hover,
@@ -138,7 +139,7 @@
 }
 
 .head-description {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -150,6 +151,8 @@
 }
 
 .head-phone {
+  border: 3px solid #ffffff;
+
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -199,6 +202,8 @@
 }
 
 .main-nav {
+  border-bottom: 5px solid #293449;
+
   background-color: #32425c;
 }
 
@@ -224,14 +229,14 @@
 }
 
 .main-content {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
 
   background-color: #ffffff;
 }
 
 .breadcrumbs {
   list-style: none;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -249,23 +254,23 @@
   color: #ffffff;
 }
 
-.promo-item[data-number="1"] {
-  background: #FFBF47 url("../img/icon-1.svg") no-repeat 85% 50%;
+.icon-bucket {
+  background: #000000 url("../img/icon-1.svg") no-repeat 85% 50%;
 }
 
-.promo-item[data-number="2"] {
-  background: #3BBCE3 url("../img/icon-2.svg") no-repeat 85% 50%;
+.icon-drill {
+  background: #000000 url("../img/icon-2.svg") no-repeat 85% 50%;
 }
 
-.promo-item[data-number="3"] {
-  background: #DC91D8 url("../img/icon-3.svg") no-repeat 85% 50%;
+.icon-tractor {
+  background: #000000 url("../img/icon-3.svg") no-repeat 85% 50%;
 }
 
-.promo-item[data-number="4"] {
-  background: #8ED78F url("../img/icon-4.svg") no-repeat 85% 50%;
+.icon-cart {
+  background: #000000 url("../img/icon-4.svg") no-repeat 85% 50%;
 }
 
-.promo-item[data-number="5"] {
+.icon-car {
   background: #FFBF47 url("../img/icon-5.svg") no-repeat 85% 50%;
 }
 
@@ -286,6 +291,22 @@
 
 .promo-item a:active {
   background-color: rgba(229, 229, 229, 0.3);
+}
+
+.bg-yellow {
+  background-color: #FFBF47;
+}
+
+.bg-blue {
+  background-color: #3BBCE3;
+}
+
+.bg-purple {
+  background-color: #DC91D8;
+}
+
+.bg-green {
+  background-color: #8ED78F;
 }
 
 .promo-gallery {
@@ -347,7 +368,7 @@
   border: 1px solid #E5E5E5;
   border-radius: 2px;
 
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
@@ -367,12 +388,52 @@
   border-color: #ee3643;
 }
 
+.button-alternative {
+  border: 3px solid #63A63E;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background-color: #63A63E;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.button-alternative:hover {
+  background-color: #5FBB2D;
+  border-color: #5FBB2D;
+}
+
+.button-alternative:active {
+  background-color: #518534;
+  border-color: #518534;
+}
+
+.button-alternative.button-secondary {
+  border: 3px solid #63A63E;
+
+  color: #32425C;
+
+  background-color: #ffffff;
+}
+
+.button-alternative.button-secondary:hover {
+  border-color: #32425C;
+}
+
+.button-alternative.button-secondary:active {
+  opacity: 0.3;
+}
+
 .list-section ul {
   list-style: none;
 }
 
 .page-title {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -393,7 +454,7 @@
 }
 
 .section-title {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
@@ -402,7 +463,7 @@
 }
 
 .section-subtitle {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -426,7 +487,7 @@
 }
 
 .field-title {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -445,7 +506,7 @@
   border: none;
 
   text-align: center;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
 
@@ -454,7 +515,7 @@
 
 .custom-checkbox,
 .custom-radio {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
@@ -472,7 +533,7 @@
 .parameter-btn {
   border: none;
 
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
@@ -508,7 +569,7 @@
 .card {
   border: 1px solid #EAEAEA;
 
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
 }
 
@@ -548,7 +609,7 @@
 }
 
 .simple-text {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 30px;
   color: #000000;
@@ -558,7 +619,7 @@
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
 
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
@@ -617,7 +678,7 @@
 }
 
 .main-footer {
-  font-family: Cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: #F1F5F7;
