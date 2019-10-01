@@ -137,7 +137,7 @@
   <div class="container flex-row">
     <ul class="breadcrumbs">
       <li>
-        <a href="index.html" class="breadcrumbs-link">Главная</a>
+        <a href="index.html" class="breadcrumbs-link home"><span class="visually-hidden">Главная</span></a>
       </li>
       <li>
         <a href="#" class="breadcrumbs-link">Каталог</a>
@@ -161,67 +161,53 @@
         <fieldset class="form-field">
           <legend class="field-title">Цена:</legend>
           <div class="sub-block"></div>
-          <div>
+          <div class="range-container">
             <label class="text-range">
               <input type="number" name="price-from" value="0">
-              От
+              <span class="visually-hidden">От</span>
             </label>
-            —
+             —
             <label class="text-range">
               <input type="number" name="price-to" value="30000">
-              До
+              <span class="visually-hidden">До</span>
             </label>
           </div>
         </fieldset>
         <fieldset class="form-field">
           <legend class="field-title">Производители:</legend>
-          <ul>
-            <li>
-              <label class="custom-checkbox">
-                <input type="checkbox" name="manufacturers" value="Bosch" checked>
-                Bosch
-              </label>
+          <ul class="options-list">
+            <li class="form-control">
+              <input class="custom-checkbox" type="checkbox" name="manufacturers" value="Bosch" id="m-1" checked>
+              <label class="checkbox-label" for="m-1">Bosch</label>
             </li>
-            <li>
-              <label class="custom-checkbox">
-                <input type="checkbox" name="manufacturers" value="Интерскол">
-                Интерскол
-              </label>
+            <li class="form-control">
+              <input class="custom-checkbox" type="checkbox" name="manufacturers" value="Интерскол" id="m-2">
+              <label class="checkbox-label" for="m-2">Интерскол</label>
             </li>
-            <li>
-              <label class="custom-checkbox">
-                <input type="checkbox" name="manufacturers" value="Makita" checked>
-                Makita
-              </label>
+            <li class="form-control">
+              <input class="custom-checkbox" type="checkbox" name="manufacturers" value="Makita" id="m-3" checked>
+              <label class="checkbox-label" for="m-3">Makita</label>
             </li>
-            <li>
-              <label class="custom-checkbox">
-                <input type="checkbox" name="manufacturers" value="DeWalt">
-                DeWalt
-              </label>
+            <li class="form-control">
+              <input class="custom-checkbox" type="checkbox" name="manufacturers" value="DeWalt" id="m-4">
+              <label class="checkbox-label" for="m-4">DeWalt</label>
             </li>
-            <li>
-              <label class="custom-checkbox">
-                <input type="checkbox" name="manufacturers" value="Hitachi">
-                Hitachi
-              </label>
+            <li class="form-control">
+              <input class="custom-checkbox" type="checkbox" name="manufacturers" value="Hitachi" id="m-5">
+              <label class="checkbox-label" for="m-5">Hitachi</label>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form-field">
           <legend class="field-title">Питание:</legend>
-          <ul>
-            <li>
-              <label class="custom-radio">
-                <input type="radio" name="supply" value="Аккумуляторные" checked>
-                Аккумуляторные
-              </label>
+          <ul class="options-list">
+            <li class="form-control">
+              <input class="custom-radio" type="radio" name="supply" value="Аккумуляторные" id="s-1" checked>
+              <label class="radio-label" for="s-1">Аккумуляторные</label>
             </li>
-            <li>
-              <label class="custom-radio">
-                <input type="radio" name="supply" value="Сетевые">
-                Сетевые
-              </label>
+            <li class="form-control">
+              <input class="custom-radio" type="radio" name="supply" value="Сетевые" id="s-2">
+              <label class="radio-label" for="s-2">Сетевые</label>
             </li>
           </ul>
         </fieldset>
