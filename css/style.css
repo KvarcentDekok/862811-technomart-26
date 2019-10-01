@@ -309,8 +309,7 @@
   color: #32425c;
 }
 
-.enter ul,
-.profile ul {
+.buttons-group {
   display: flex;
   justify-content: flex-end;
   width: 300px;
@@ -321,7 +320,7 @@
 }
 
 .head-button {
-  display: block;
+  display: flex;
   padding: 13px 24px 11px;
 
   font-size: 21px;
@@ -332,18 +331,25 @@
   background-color: #ffffff;
 }
 
-.head-button.login {
-  padding-left: 14px;
-  margin-right: 10px;
-}
-
-.head-button.user {
+.icon {
   display: flex;
-  padding-left: 13px;
+  align-items: center;
+
+  position: relative;
+  left: -6px;
 }
 
-.head-button .icon {
+.head-button.login {
   margin-right: 10px;
+}
+
+.head-button.logout {
+  padding: 0 10px;
+  height: 100%;
+}
+
+.logout .icon {
+  left: 0;
 }
 
 .head-button:hover .icon path {
@@ -354,21 +360,44 @@
   fill: #c5c5c5;
 }
 
-.head-button.logout {
-  width: 44px;
-  height: 100%;
-  padding: 0;
+.links-group {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  margin-top: 6px;
+  margin-bottom: 0;
+  padding-left: 16px;
+
+  list-style: none;
+}
+
+.links-group li {
+  margin-right: 30px;
 
   position: relative;
 }
 
-.logout .icon {
-  margin-top: -10px;
-  margin-left: -8px;
+.links-group li:last-child {
+  margin-right: 0;
+}
+
+.links-group li::before {
+  content: "";
+
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
 
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: -16px;
+
+  background-color: #32425c;
+  border-radius: 50px;
+}
+
+.links-group li:first-child::before {
+  content: none;
 }
 
 .enter .head-button:hover,
@@ -434,6 +463,7 @@
 
 .main-content {
   padding-top: 59px;
+  padding-bottom: 86px;
 
   font-family: "Cuprum", "Arial", sans-serif;
 
@@ -559,11 +589,14 @@
 }
 
 .button {
+  display: inline-block;
+  height: 38px;
   border: none;
   border-radius: 2px;
 
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 18px;
+  line-height: 38px;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
@@ -906,17 +939,53 @@
   width: 535px;
 }
 
+.about-info .button {
+  padding: 0 40px;
+}
+
 .about-contacts {
   width: 301px;
+
+  position: relative;
+}
+
+.about-contacts .button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  text-align: center;
 }
 
 .companies {
+  padding-left: 35px;
+
   list-style: none;
   font-size: 18px;
   line-height: 30px;
 }
 
+.companies li {
+  position: relative;
+}
+
+.companies li::before {
+  content: '';
+
+  width: 25px;
+  height: 2px;
+
+  position: absolute;
+  top: 12px;
+  left: -35px;
+
+  background-color: #EE3643;
+}
+
 .map {
+  display: block;
+
   text-decoration: none;
 }
 
@@ -956,14 +1025,23 @@
   list-style: none;
 }
 
+.footer-contacts {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
   width: 548px;
+  padding-left: 0;
+  margin-top: 39px;
+  margin-bottom: 0;
 }
 
 .menu.extra {
   width: 525px;
+  margin-top: 24px;
 }
 
 .menu a {
@@ -986,6 +1064,10 @@
 }
 
 .bottom-footer {
+  margin-top: 50px;
+  padding-top: 36px;
+  padding-bottom: 31px;
+
   font-size: 16px;
   line-height: 18px;
 
@@ -993,6 +1075,8 @@
 }
 
 .bottom-footer a {
+  display: block;
+
   color: #FFD180;
   text-decoration: none;
 }
@@ -1006,14 +1090,137 @@
   text-decoration: none;
 }
 
-.social {
-  background-color: #212A3A;
+.bottom-footer p {
+  margin: 0;
 }
 
-.social:hover {
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 308px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.social {
+  display: block;
+  width: 41px;
+  height: 41px;
+  margin-right: 4px;
+
+  background-color: #212A3A;
+  border-radius: 50%;
+}
+
+.social.vk {
+  background: #212A3A url("../img/icon-vk.svg") no-repeat 50% 50%;
+}
+
+.social.facebook {
+  background: #212A3A url("../img/icon-fb.svg") no-repeat 50% 50%;
+}
+
+.social.instagram {
+  background: #212A3A url("../img/icon-insta.svg") no-repeat 50% 50%;
+}
+
+.social:hover,
+.social:active {
   background-color: #EE3643;
 }
 
+.modal {
+  position: fixed;
 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
+}
 
+.modal.contact {
+  border-top: 7px solid #ee3643;
+}
+
+.modal.map {
+  font-size: 0;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 620px; /*Edge, IE*/
+  width: min-content;
+  padding: 44px 80px 37px;
+
+  background-color: #ffffff;
+}
+
+.button-container {
+  padding: 37px 80px;
+
+  background-color: #F4F4F4;
+}
+
+.form-text label {
+  display: block;
+  margin-bottom: 9px;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.form-text input {
+  width: 220px;
+  margin-bottom: 18px;
+}
+
+.form-text textarea {
+  width: 460px;
+}
+
+.form-text input,
+.form-text textarea {
+  padding: 10px 15px;
+  border: 2px solid #DEE3E4;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+
+  border-radius: 3px;
+}
+
+.form-text input::placeholder,
+.form-text textarea::placeholder {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  color: #A9A9A9;
+}
+
+.form-text input:hover,
+.form-text textarea:hover {
+  border: 2px solid #B5B5B5;
+}
+
+.form-text input:focus,
+.form-text textarea:focus {
+  border: 2px solid #ee3643;
+}
+
+.close-btn {
+  width: 21px;
+  height: 21px;
+  border: none;
+
+  position: absolute;
+  top: 9px;
+  right: 9px;
+
+  background: transparent url("../img/icon-close.svg") no-repeat 0 0;
+  cursor: pointer;
+}
+
+.contact-form .button {
+  width: 100%;
+}
 

@@ -42,16 +42,18 @@
           <p class="head-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
 
-        <div class="enter" hidden>
-          <ul>
+        <div class="enter">
+          <ul class="buttons-group">
             <li>
               <a href="#" class="head-button login">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" class="icon">
-                  <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"></path>
-                  <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17" class="icon">
+                    <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"></path>
+                    <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99
                    1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171
                    1.059-1.01 1.059z"></path>
-                </svg>
+                  </svg>
+                </div>
                 Войти
               </a>
             </li>
@@ -61,12 +63,12 @@
           </ul>
         </div>
 
-        <div class="profile">
-          <ul>
+        <div class="profile" hidden>
+          <ul class="buttons-group">
             <li>
               <a href="#" class="head-button user">
-                <div>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" class="icon">
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
                     <path fill="#c5c5c5"
                           d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903
                         1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374
@@ -79,19 +81,21 @@
             </li>
             <li>
               <a href="#" class="head-button logout">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" class="icon">
-                  <g fill="#c5c5c5">
-                    <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"></path>
-                    <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938
+                <div class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17" class="icon">
+                    <g fill="#c5c5c5">
+                      <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z"></path>
+                      <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938
                     0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839
                     0-.992-.683-1.01-1.058z"></path>
-                  </g>
-                </svg>
+                    </g>
+                  </svg>
+                </div>
                 <span class="visually-hidden">Выход</span>
               </a>
             </li>
           </ul>
-          <ul>
+          <ul class="links-group">
             <li>
               <a href="#" class="head-link">Мои заказы</a>
             </li>
@@ -401,7 +405,7 @@
         </ul>
       </div>
       <div class="flex-row">
-        <p>
+        <p class="footer-contacts">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
           +7 (812) 555-05-55
         </p>
@@ -434,15 +438,15 @@
         </section>
         <section>
           <h2 class="visually-hidden">Социальные кнопки</h2>
-          <ul>
+          <ul class="social-buttons">
             <li>
-              <a href="#" class="social">Техномарт в ВК</a>
+              <a href="#" class="social vk"><span class="visually-hidden">Техномарт в ВК</span></a>
             </li>
             <li>
-              <a href="#" class="social">Техномарт в Facebook</a>
+              <a href="#" class="social facebook"><span class="visually-hidden">Техномарт в Facebook</span></a>
             </li>
             <li>
-              <a href="#" class="social">Техномарт в Instagram</a>
+              <a href="#" class="social instagram"><span class="visually-hidden">Техномарт в Instagram</span></a>
             </li>
           </ul>
         </section>
@@ -458,32 +462,36 @@
     </div>
   </footer>
 
-  <aside hidden>
-    <form method="post" action="https://echo.htmlacademy.ru">
-      <div>
-        <label for="name">Ваше имя:</label>
-        <input type="text" id="name" name="name" placeholder="Имя Фамилия">
-      </div>
-      <div>
-        <label for="email">Ваш e-mail:</label>
-        <input type="email" id="email" name="email" placeholder="email@example.com">
-      </div>
-      <div>
-        <label for="text">Текст письма:</label>
-        <textarea id="text" name="text" rows="5" placeholder="В свободной форме"></textarea>
+  <aside class="modal contact" hidden>
+    <form method="post" action="https://echo.htmlacademy.ru" class="contact-form">
+      <div class="form-container">
+        <div class="form-text">
+          <label for="name">Ваше имя:</label>
+          <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+        </div>
+        <div class="form-text">
+          <label for="email">Ваш e-mail:</label>
+          <input type="email" id="email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="form-text">
+          <label for="text">Текст письма:</label>
+          <textarea id="text" name="text" rows="5" placeholder="В свободной форме"></textarea>
+        </div>
       </div>
 
-      <button type="submit">Отправить</button>
-
-      <button type="button">Закрыть</button>
+      <div class="button-container">
+        <button type="submit" class="button">Отправить</button>
+      </div>
     </form>
+
+    <button type="button" class="close-btn"><span class="visually-hidden">Закрыть</span></button>
   </aside>
 
-  <aside hidden>
+  <aside class="modal map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.741309887234!2d30.31874187468214!3d59.93889136130221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1568555637026!5m2!1sru!2sua"
             width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
-    <button type="button">Закрыть</button>
+    <button type="button" class="close-btn"><span class="visually-hidden">Закрыть</span></button>
   </aside>
 
   </body>
