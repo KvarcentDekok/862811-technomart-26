@@ -472,6 +472,7 @@
 
 .inner-page .main-content {
   padding-top: 20px;
+  padding-bottom: 0;
 }
 
 .breadcrumbs {
@@ -645,7 +646,11 @@
 }
 
 .button-secondary {
-  padding: 9px 39px;
+  display: inline-block;
+  width: 140px;
+  padding: 9px 0;
+
+  text-align: center;
 }
 
 .button-secondary,
@@ -687,6 +692,7 @@
 
   background-color: #63A63E;
   border-radius: 2px;
+  box-shadow: 0 3px 0 #518534;
   cursor: pointer;
 }
 
@@ -701,11 +707,13 @@
 }
 
 .button-alternative.button-secondary {
+  padding-bottom: 7px;
   border: 3px solid #63A63E;
 
   color: #32425C;
 
   background-color: #ffffff;
+  box-shadow: none;
 }
 
 .button-alternative.button-secondary:hover {
@@ -753,6 +761,8 @@
 }
 
 .section-title {
+  margin-top: 0;
+
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 30px;
@@ -1004,11 +1014,14 @@
   margin-bottom: 20px;
   border: 1px solid #EAEAEA;
 
+  position: relative;
+
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   text-align: center;
 
   background-color: #ffffff;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -1021,6 +1034,27 @@
 
 .card:hover .card-buttons {
   display: block;
+}
+
+.card.new::after {
+  content: 'new';
+
+  height: 28px;
+  width: 84px;
+
+  position: absolute;
+  top: 1px;
+  right: -13px;
+
+  transform: rotate(45deg);
+  transform-origin: bottom;
+
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 28px;
+  color: #ffffff;
+
+  background-color: #ee3643;
 }
 
 .card-top {
@@ -1205,6 +1239,16 @@
   list-style: none;
 }
 
+.pagination-link {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  margin-right: 10px;
+
+  line-height: 38px;
+  text-align: center;
+}
+
 .pagination-link:not([href]) {
   border: none;
 
@@ -1214,6 +1258,8 @@
 }
 
 .about-page {
+  padding: 62px 0 34px;
+
   background-color: #F4F8F9;
 }
 
@@ -1340,17 +1386,62 @@
 }
 
 .modal {
+  display: none;
+  border-top: 7px solid #ee3643;
+
   position: fixed;
 
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 }
 
-.modal.contact {
-  border-top: 7px solid #ee3643;
+.modal.map {
+  border-top: none;
+
+  font-size: 0;
 }
 
-.modal.map {
-  font-size: 0;
+.modal .button,
+.modal .button-secondary {
+  width: 220px;
+  padding: 0;
+  border: none;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 38px;
+
+  text-align: center;
+}
+
+.modal-body {
+  width: 620px;
+  padding: 48px 80px;
+
+  background-color: #ffffff;
+}
+
+.modal-message {
+  padding-left: 99px;
+
+  position: relative;
+
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.modal-message::before {
+  content: '';
+
+  width: 66px;
+  height: 66px;
+  margin-top: -33px;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  background: url("../img/icon-mark.svg");
 }
 
 .form-container {
@@ -1365,7 +1456,12 @@
 }
 
 .button-container {
+  display: flex;
+  justify-content: space-between;
   padding: 37px 80px;
+  margin: 0;
+
+  list-style: none;
 
   background-color: #F4F4F4;
 }
