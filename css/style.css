@@ -644,6 +644,10 @@
   background-color: #BA2732;
 }
 
+.button-secondary {
+  padding: 9px 39px;
+}
+
 .button-secondary,
 .pagination-link {
   border: 1px solid #E5E5E5;
@@ -670,6 +674,9 @@
 }
 
 .button-alternative {
+  width: 135px;
+  padding: 7px 0 4px 0;
+  margin-bottom: 11px;
   border: 3px solid #63A63E;
 
   font-family: "Cuprum", "Arial", sans-serif;
@@ -781,6 +788,11 @@
   border-right: none;
   border-left: none;
   border-bottom: 1px solid #E5E5E5;
+}
+
+.form-field:last-of-type {
+  margin-bottom: 75px;
+  border-bottom: none;
 }
 
 .field-title {
@@ -898,6 +910,17 @@
   filter: brightness(0.75);
 }
 
+.custom-checkbox:disabled + .checkbox-label,
+.custom-radio:disabled + .radio-label {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-checkbox:disabled + .checkbox-label::before,
+.custom-radio:disabled + .radio-label::before {
+  filter: none;
+  opacity: 0.3;
+}
+
 .sort {
   width: 700px;
 }
@@ -907,6 +930,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 355px;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 140px;
 
   list-style: none;
 }
@@ -938,14 +965,29 @@
 
 .sort-type {
   display: flex;
+  margin: 0;
+  padding-left: 0;
+
   list-style: none;
 }
 
 .type-btn {
+  width: 11px;
+  height: 10px;
+  padding: 0;
+  margin-left: 21px;
   border: none;
 
   background-color: transparent;
   cursor: pointer;
+}
+
+.type-btn.active path {
+  fill: #EE3643;
+}
+
+.type-btn:hover path {
+  fill: #231F20;
 }
 
 .card-list {
@@ -964,6 +1006,33 @@
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
+  text-align: center;
+
+  background-color: #ffffff;
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover img {
+  display: none;
+}
+
+.card:hover .card-buttons {
+  display: block;
+}
+
+.card-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 170px;
+}
+
+.card-buttons {
+  display: none;
 }
 
 .manufacturers .card:active {
@@ -971,12 +1040,17 @@
 }
 
 .card-title {
+  padding: 0 16px;
+  margin: 9px 0;
+
   font-size: 18px;
   line-height: 20px;
   color: #000000;
 }
 
 .price-old {
+  margin: 9px 0;
+
   font-size: 17px;
   line-height: 18px;
   color: #A9A9A9;
@@ -984,13 +1058,34 @@
 }
 
 .price {
+  width: 141px;
+  height: 38px;
+  margin: 9px auto 21px;
   border-radius: 2px;
 
+  position: relative;
+
   font-size: 17px;
-  line-height: 18px;
+  line-height: 38px;
   color: #ffffff;
 
   background-color: #ee3643;
+}
+
+.price::after {
+  content: '';
+
+  border-top: 19px solid #ffffff;
+  border-bottom: 19px solid #ffffff;
+  border-left: 19px solid #ee3643;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.card-title + .price {
+  margin-top: 36px;
 }
 
 .services {
