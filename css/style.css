@@ -533,6 +533,7 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 53px;
 }
 
 .promo-item {
@@ -604,6 +605,10 @@ img {
   flex-direction: column;
   justify-content: space-between;
   order: 1;
+}
+
+.items-wrapper .promo-item:last-of-type {
+  margin-bottom: 0;
 }
 
 .bg-yellow {
@@ -875,7 +880,24 @@ img {
 }
 
 .title-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 24px;
+  margin-bottom: 20px;
+
   background-color: #F9F5F0;
+}
+
+.title-box .section-title {
+  margin-bottom: 0;
+}
+
+.title-box .button {
+  min-width: 253px;
+
+  text-align: center;
 }
 
 .sub-block {
@@ -1132,6 +1154,7 @@ img {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
 
   list-style: none;
 }
@@ -1155,8 +1178,31 @@ img {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-.card:hover img {
-  display: none;
+.card:hover .card-buttons {
+  z-index: 3;
+}
+
+.manufacturers {
+  margin-bottom: 85px;
+}
+
+.manufacturers .card {
+  min-height: 145px;
+}
+
+.link-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  text-decoration: none;
+}
+
+.card-image {
+  position: relative;
+  z-index: 2;
 }
 
 .card:hover .card-buttons {
@@ -1192,10 +1238,19 @@ img {
   align-items: center;
   flex-wrap: wrap;
   height: 170px;
+
+  position: relative;
 }
 
 .card-buttons {
-  display: none;
+  height: 100%;
+  padding-top: 44px;
+
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  background-color: #ffffff;
 }
 
 .manufacturers .card:active {
