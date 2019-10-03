@@ -141,25 +141,25 @@
       <section class="promo">
         <h2 class="visually-hidden">Промо</h2>
 
-        <div class="promo-item bg-yellow icon-bucket">
-          Материалы
+        <div class="promo-item bg-yellow icon-bucket new">
+          <p>Материалы</p>
           <a href="#">На любой вкус</a>
         </div>
         <div class="promo-item bg-blue icon-drill">
-          Инструмент
+          <p>Инструмент</p>
           <a href="#">На все случаи</a>
         </div>
         <div class="promo-item bg-purple icon-tractor">
-          Техника
+          <p>Техника</p>
           <a href="#">Для стройки</a>
         </div>
         <div class="items-wrapper">
           <div class="promo-item bg-green icon-cart">
-            Скидки 50%
+            <p>Скидки 50%</p>
             <a href="#">На 350 товаров</a>
           </div>
           <div class="promo-item bg-yellow icon-car">
-            Доставка
+            <p>Доставка</p>
             <a href="#">Бесплатно</a>
           </div>
         </div>
@@ -167,34 +167,36 @@
         <article class="promo-gallery">
           <h3 class="visually-hidden">Промо-галерея</h3>
 
-          <ul>
-            <li>
+          <ul class="gallery-row">
+            <li class="gallery-slide">
               <h4 class="gallery-title">Дрели</h4>
               <p class="gallery-description">Соседям на радость</p>
 
               <img src="img/slider-drill.jpg" alt="Дрель" width="620" height="266">
+
+              <a href="catalog.html" class="button">Открыть каталог</a>
             </li>
-            <li>
+            <li class="gallery-slide">
               <h4 class="gallery-title">Перфораторы</h4>
               <p class="gallery-description">Настоящие мужские игрушки</p>
 
               <img src="img/slider-perforator.jpg" alt="Перфоратор" width="620" height="266">
+
+              <a href="catalog.html" class="button">Открыть каталог</a>
             </li>
           </ul>
 
-          <button type="button" class="gallery-control left">Назад</button>
-          <button type="button" class="gallery-control right">Вперёд</button>
+          <button type="button" class="gallery-control left"><span class="visually-hidden">Назад</span></button>
+          <button type="button" class="gallery-control right"><span class="visually-hidden">Вперёд</span></button>
 
-          <ul>
+          <ul class="gallery-dots">
             <li>
-              <button type="button" class="gallery-dot">1</button>
+              <button type="button" class="gallery-dot active"><span class="visually-hidden">Первый слайд</span></button>
             </li>
             <li>
-              <button type="button" class="gallery-dot">2</button>
+              <button type="button" class="gallery-dot"><span class="visually-hidden">Второй слайд</span></button>
             </li>
           </ul>
-
-          <a href="catalog.html" class="button">Открыть каталог</a>
         </article>
       </section>
 
