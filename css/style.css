@@ -81,6 +81,10 @@ img {
   flex-wrap: wrap;
 }
 
+.flex-row.flex-left {
+  justify-content: left;
+}
+
 .main-header {
   font-family: "Cuprum", "Arial", sans-serif;
 }
@@ -111,6 +115,7 @@ img {
   text-decoration: none;
 
   background: #EE3643 url("../img/logo-technomart.svg") no-repeat 50%;
+  background-size: 110px;
   box-shadow: 0 5px 0 0 #B52933;
 }
 
@@ -255,7 +260,7 @@ img {
 }
 
 .head {
-  padding-top: 46px;
+  padding-top: 47px;
   padding-bottom: 60px;
 
   background-color: #f3f7f8;
@@ -263,7 +268,7 @@ img {
 
 .head-description {
   width: 197px;
-  margin-top: 0;
+  margin-top: 2px;
   margin-bottom: 0;
   margin-left: 52px;
 
@@ -275,6 +280,8 @@ img {
 }
 
 .head-center {
+  margin-left: 71px;
+
   text-align: center;
 }
 
@@ -282,7 +289,7 @@ img {
   display: block;
   padding: 9px 50px 9px 71px;
   border: 3px solid #ffffff;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
 
   position: relative;
 
@@ -313,6 +320,11 @@ img {
   color: #32425c;
 }
 
+.enter,
+.profile {
+  margin-left: auto;
+}
+
 .buttons-group {
   display: flex;
   justify-content: flex-end;
@@ -340,16 +352,25 @@ img {
   align-items: center;
 
   position: relative;
-  left: -6px;
+  left: -7px;
 }
 
 .head-button.login {
-  margin-right: 10px;
+  margin-right: 11px;
+  padding-left: 27px;
+}
+
+.head-button.user {
+  min-width: 257px;
 }
 
 .head-button.logout {
   padding: 0 10px;
   height: 100%;
+}
+
+.user .icon {
+  left: -14px;
 }
 
 .logout .icon {
@@ -370,13 +391,13 @@ img {
   max-width: 300px;
   margin-top: 6px;
   margin-bottom: 0;
-  padding-left: 16px;
+  padding-left: 19px;
 
   list-style: none;
 }
 
 .links-group li {
-  margin-right: 30px;
+  margin-right: 32px;
 
   position: relative;
 }
@@ -425,7 +446,7 @@ img {
 
 .main-nav {
   width: 100%;
-  margin-top: 42px;
+  margin-top: 40px;
   border-bottom: 5px solid #293449;
 
   background-color: #32425c;
@@ -474,7 +495,7 @@ img {
 }
 
 .inner-page .main-content {
-  padding-top: 20px;
+  padding-top: 21px;
   padding-bottom: 0;
 }
 
@@ -496,7 +517,7 @@ img {
 }
 
 .breadcrumbs-link {
-  margin-right: 40px;
+  margin-right: 41px;
 
   color: #000000;
   text-decoration: none;
@@ -520,7 +541,7 @@ img {
 
   position: absolute;
   top: 50%;
-  left: -23px;
+  left: -25px;
 
   background: url("../img/icon-right-small.svg") no-repeat 0 0;
 }
@@ -551,23 +572,23 @@ img {
 }
 
 .icon-bucket {
-  background: #000000 url("../img/icon-1.svg") no-repeat 85% 50%;
+  background: #000000 url("../img/icon-1.svg") no-repeat 83% 53%;
 }
 
 .icon-drill {
-  background: #000000 url("../img/icon-2.svg") no-repeat 85% 50%;
+  background: #000000 url("../img/icon-2.svg") no-repeat 88% 54%;
 }
 
 .icon-tractor {
-  background: #000000 url("../img/icon-3.svg") no-repeat 85% 50%;
+  background: #000000 url("../img/icon-3.svg") no-repeat 86% 50%;
 }
 
 .icon-cart {
-  background: #000000 url("../img/icon-4.svg") no-repeat 85% 50%;
+  background: #000000 url("../img/icon-4.svg") no-repeat 81% 50%;
 }
 
 .icon-car {
-  background: #FFBF47 url("../img/icon-5.svg") no-repeat 85% 50%;
+  background: #FFBF47 url("../img/icon-5.svg") no-repeat 86% 51%;
 }
 
 .promo-item p {
@@ -659,7 +680,7 @@ img {
   margin: 0;
 
   position: absolute;
-  top: 20px;
+  top: 23px;
   left: 24px;
 
   font-size: 36px;
@@ -672,8 +693,8 @@ img {
   margin: 0;
 
   position: absolute;
-  top: 62px;
-  left: 24px;
+  top: 61px;
+  left: 25px;
 
   font-size: 18px;
   line-height: 24px;
@@ -700,7 +721,7 @@ img {
 }
 
 .gallery-control.right {
-  right: 25px;
+  right: 20px;
 
   background: transparent url("../img/icon-right.svg") no-repeat 0 0;
 }
@@ -713,10 +734,10 @@ img {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: -85px;
+  margin-left: -80px;
 
   position: absolute;
-  bottom: 36px;
+  bottom: 34px;
   left: 50%;
 
   list-style: none;
@@ -746,7 +767,7 @@ img {
 }
 
 .promo-gallery .button {
-  padding: 0 47px;
+  padding: 0 49px;
 
   position: absolute;
   bottom: 22px;
@@ -761,7 +782,7 @@ img {
 
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 40px;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
@@ -862,7 +883,7 @@ img {
 
 .page-title {
   width: 100%;
-  padding: 27px 28px;
+  padding: 29px 28px;
   margin-top: 21px;
 
   font-family: "Cuprum", "Arial", sans-serif;
@@ -884,7 +905,7 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 24px;
+  padding: 25px 24px 25px 28px;
   margin-bottom: 20px;
 
   background-color: #F9F5F0;
@@ -904,7 +925,8 @@ img {
   display: flex;
   justify-content: space-between;
   border-radius: 3px;
-  padding: 10px 18px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
 
   background-color: #F7F3EC;
 }
@@ -915,7 +937,7 @@ img {
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: normal;
   font-size: 30px;
-  line-height: 30px;
+  line-height: 31px;
   color: #000000;
   text-transform: uppercase;
 }
@@ -943,6 +965,7 @@ img {
 
 .form-field {
   padding: 0;
+  margin-bottom: 16px;
   border-top: none;
   border-right: none;
   border-left: none;
@@ -950,18 +973,78 @@ img {
 }
 
 .form-field:last-of-type {
-  margin-bottom: 75px;
+  margin-bottom: 62px;
   border-bottom: none;
 }
 
 .field-title {
-  margin-bottom: 19px;
+  margin-bottom: 14px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.range {
+  width: 100%;
+  height: 60px;
+
+  position: relative;
+}
+
+.range-bar {
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+
+  background-color: #D7DCDE;
+}
+
+.range-control {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin-top: -10px;
+  border: 8px solid #ffffff;
+
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+
+  background-color: #ABABAB;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px #E0DDD9;
+  cursor: pointer;
+}
+
+.range-control.left {
+  left: 0;
+}
+
+.range-control.right {
+  margin-left: -20px;
+
+  left: 90%;
+}
+
+.range-progress {
+  width: 90%;
+  height: 2px;
+  margin-top: -1px;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+
+  background-color: #00CA74;
 }
 
 .range-container {
@@ -1000,8 +1083,8 @@ img {
 }
 
 .form-control {
-  padding-left: 35px;
-  margin-bottom: 16px;
+  padding-left: 34px;
+  margin-bottom: 20px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 15px;
@@ -1082,6 +1165,7 @@ img {
 
 .sort {
   width: 700px;
+  margin-bottom: 20px;
 }
 
 .sort-parameters {
@@ -1092,7 +1176,7 @@ img {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 140px;
+  margin-left: 107px;
 
   list-style: none;
 }
@@ -1183,7 +1267,7 @@ img {
 }
 
 .manufacturers {
-  margin-bottom: 85px;
+  margin-bottom: 66px;
 }
 
 .manufacturers .card {
@@ -1219,6 +1303,7 @@ img {
   position: absolute;
   top: 1px;
   right: -13px;
+  z-index: 3;
 
   transform: rotate(45deg);
   transform-origin: bottom;
@@ -1259,7 +1344,7 @@ img {
 
 .card-title {
   padding: 0 16px;
-  margin: 9px 0;
+  margin: 9px 0 12px;
 
   font-size: 18px;
   line-height: 20px;
@@ -1267,12 +1352,14 @@ img {
 }
 
 .price-old {
-  margin: 9px 0;
+  margin: 10px 0;
+  padding-left: 2px;
 
   font-size: 17px;
   line-height: 18px;
   color: #A9A9A9;
   text-decoration: line-through;
+  text-transform: uppercase;
 }
 
 .price {
@@ -1286,6 +1373,7 @@ img {
   font-size: 17px;
   line-height: 38px;
   color: #ffffff;
+  text-transform: uppercase;
 
   background-color: #ee3643;
 }
@@ -1303,10 +1391,13 @@ img {
 }
 
 .card-title + .price {
-  margin-top: 36px;
+  margin-top: 40px;
 }
 
 .services {
+  padding-top: 63px;
+  padding-bottom: 22px;
+
   background-color: #F4F8F9;
 }
 
@@ -1315,23 +1406,55 @@ img {
 }
 
 .simple-text {
+  margin-top: 22px;
+
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 30px;
+  line-height: 25px;
   color: #000000;
 }
 
+.services-list {
+  margin-top: 56px;
+  margin-right: 80px;
+  padding: 0;
+  min-width: 240px;
+
+  position: relative;
+}
+
+.services-list::after {
+  content: '';
+
+  width: 10px;
+  height: 279px;
+  margin-top: -170px;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  background: url("../img/servises-shadow.png") no-repeat 0 0;
+}
+
 .services-item {
+  display: block;
+  width: 100%;
+  padding: 13px 21px 17px;
   border-top: 1px solid #405069;
   border-bottom: 1px solid #293449;
+  border-left: none;
+  border-right: none;
 
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
   color: #ffffff;
+  text-align: left;
 
   background-color: #32425C;
+  cursor: pointer;
 }
 
 .services-item.active {
@@ -1351,15 +1474,28 @@ img {
 }
 
 .service-title {
+  margin-top: 54px;
+  margin-bottom: 23px;
+
   font-weight: normal;
   font-size: 36px;
   line-height: 36px;
   color: #32425C;
+  text-transform: uppercase;
+}
+
+.service-bodies {
+  margin-top: 0;
+  margin-bottom: 92px;
+  padding: 0;
+}
+
+.bg-truck {
+  background: url("../img/truck.png") no-repeat 100% 112%;
 }
 
 .about {
-  display: flex;
-  justify-content: space-between;
+  padding-top: 78px;
 }
 
 .about-info {
@@ -1386,6 +1522,8 @@ img {
 }
 
 .companies {
+  margin-top: 0;
+  margin-bottom: 29px;
   padding-left: 35px;
 
   list-style: none;
@@ -1395,6 +1533,8 @@ img {
 
 .companies li {
   position: relative;
+  line-height: 34px;
+  margin-bottom: 6px;
 }
 
 .companies li::before {
@@ -1404,7 +1544,7 @@ img {
   height: 2px;
 
   position: absolute;
-  top: 12px;
+  top: 15px;
   left: -35px;
 
   background-color: #EE3643;
@@ -1412,6 +1552,7 @@ img {
 
 .map {
   display: block;
+  margin-top: 30px;
 
   text-decoration: none;
 }
@@ -1458,6 +1599,8 @@ img {
 
 .main-footer .logo {
   height: 63px;
+
+  background-size: 137px;
 }
 
 .main-footer ul {
@@ -1465,8 +1608,9 @@ img {
 }
 
 .footer-contacts {
-  margin-top: 24px;
+  margin-top: 33px;
   margin-bottom: 0;
+  padding-left: 4px;
 }
 
 .menu {
@@ -1480,7 +1624,7 @@ img {
 
 .menu.extra {
   width: 525px;
-  margin-top: 24px;
+  margin-top: 33px;
 }
 
 .menu a {
@@ -1531,6 +1675,7 @@ img {
 
 .bottom-footer p {
   margin: 0;
+  padding-right: 11px;
 }
 
 .social-buttons {
@@ -1538,7 +1683,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   width: 308px;
-  padding-left: 0;
+  padding-left: 39px;
   margin: 0;
 }
 
