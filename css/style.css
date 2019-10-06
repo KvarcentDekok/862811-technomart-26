@@ -66,8 +66,10 @@ html {
 }
 
 .container {
-  width: 940px;
+  width: 960px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .visually-hidden {
@@ -86,7 +88,7 @@ html {
 }
 
 .flex-row.flex-left {
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 .main-header {
@@ -434,11 +436,13 @@ html {
 }
 
 .enter .head-button:hover,
-.profile .head-link:hover {
+.profile .head-link:hover,
+.modal .button-secondary:hover {
   color: #EE3643;
 }
 
-.head .head-button:active {
+.head .head-button:active,
+.modal .button-secondary:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -558,7 +562,7 @@ html {
   content: none;
 }
 
-.promo {
+.promo .container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -1101,7 +1105,6 @@ html {
   width: 95px;
   height: 38px;
   border: none;
-  padding-left: 12px;
 
   text-align: center;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -1109,6 +1112,14 @@ html {
   line-height: 18px;
 
   background-color: transparent;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.text-range input::-webkit-inner-spin-button,
+.text-range input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 
 .options-list {
@@ -1198,37 +1209,39 @@ html {
 
 .custom-checkbox:focus + .checkbox-label::before,
 .custom-radio:focus + .radio-label::before {
-  outline: thin dotted;
-  outline: 2px solid -webkit-focus-ring-color;
+  outline: 2px solid rgb(125, 173, 217);
 }
 
 .sort {
   width: 700px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .sort-parameters {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 364px;
+  width: 354px;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 96px;
+  margin-left: 106px;
 
   list-style: none;
 }
 
 .parameter-btn {
-  border: none;
+  padding: 0;
+  border-top: none;
+  border-right: none;
+  border-bottom: 1px dotted #ee3643;
+  border-left: none;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 15px;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
-  text-decoration: underline #ee3643 dotted;
 
   background-color: transparent;
   cursor: pointer;
@@ -1236,13 +1249,15 @@ html {
 
 .parameter-btn:hover,
 .parameter-btn.active:hover {
+  border-bottom: 1px solid #ee3643;
+
   color: #000000;
-  text-decoration: underline #ee3643 solid;
 }
 
 .parameter-btn.active {
+  border-bottom: none;
+
   color: #EE3643;
-  text-decoration: none;
 }
 
 .sort-type {
@@ -1258,7 +1273,7 @@ html {
 }
 
 .type-item:first-child {
-  margin-left: 5px;
+  margin-left: 13px;
 }
 
 .type-btn {
@@ -1456,7 +1471,7 @@ html {
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 25px;
+  line-height: 24px;
   color: #000000;
 }
 
@@ -1636,7 +1651,7 @@ html {
 
 .about-page {
   margin-top: 46px;
-  padding: 62px 0 53px;
+  padding: 62px 0 56px;
 
   background-color: #F4F8F9;
 }
@@ -1664,6 +1679,13 @@ html {
   margin-top: 33px;
   margin-bottom: 0;
   padding-left: 4px;
+}
+
+.footer-contacts a {
+  display: block;
+
+  color: inherit;
+  text-decoration: none;
 }
 
 .menu {
