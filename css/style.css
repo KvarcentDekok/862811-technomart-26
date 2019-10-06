@@ -55,10 +55,14 @@ img {
   height: auto;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 .container {
@@ -612,6 +616,7 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
+  vertical-align: middle;
 
   background-color: rgba(229, 229, 229, 0.1);
   border-radius: 4px;
@@ -790,6 +795,7 @@ img {
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
+  vertical-align: middle;
 
   background-color: #EE3643;
 }
@@ -808,6 +814,7 @@ img {
   padding: 9px 0;
 
   text-align: center;
+  vertical-align: middle;
   cursor: pointer;
 }
 
@@ -1596,6 +1603,10 @@ img {
   text-decoration: none;
 }
 
+.map iframe {
+  border: none;
+}
+
 .pagination {
   display: flex;
   margin-top: 32px;
@@ -1612,6 +1623,7 @@ img {
 
   line-height: 38px;
   text-align: center;
+  vertical-align: middle;
 }
 
 .pagination-link:not([href]) {
