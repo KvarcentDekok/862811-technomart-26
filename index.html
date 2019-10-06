@@ -200,7 +200,7 @@
         </article>
       </section>
 
-      <section class="list-section">
+      <section class="cards-section">
         <div class="title-box">
           <h2 class="section-title">Популярные товары:</h2>
           <a href="#" class="button">Все популярные товары</a>
@@ -212,8 +212,10 @@
               <img class="card-image" src="img/Perforator_3.jpg" alt="Перфоратор BOSCH BFG 9000" width="218"
                    height="170">
               <div class="card-buttons">
-                <button type="button" class="button-alternative">Купить</button>
-                <button type="button" class="button-alternative button-secondary">В закладки</button>
+                <button type="button" class="button-alternative" data-target="basket">Купить</button>
+                <button type="button" class="button-alternative button-secondary" data-target="bookmarks">
+                  В закладки
+                </button>
               </div>
             </div>
             <h3 class="card-title">Перфоратор BOSCH BFG 9000</h3>
@@ -225,8 +227,10 @@
               <img class="card-image" src="img/Perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000" width="218"
                    height="170">
               <div class="card-buttons">
-                <button type="button" class="button-alternative">Купить</button>
-                <button type="button" class="button-alternative button-secondary">В закладки</button>
+                <button type="button" class="button-alternative" data-target="basket">Купить</button>
+                <button type="button" class="button-alternative button-secondary" data-target="bookmarks">
+                  В закладки
+                </button>
               </div>
             </div>
             <h3 class="card-title">Перфоратор BOSCH BFG 3000</h3>
@@ -238,8 +242,10 @@
               <img class="card-image" src="img/Perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000" width="218"
                    height="170">
               <div class="card-buttons">
-                <button type="button" class="button-alternative">Купить</button>
-                <button type="button" class="button-alternative button-secondary">В закладки</button>
+                <button type="button" class="button-alternative" data-target="basket">Купить</button>
+                <button type="button" class="button-alternative button-secondary" data-target="bookmarks">
+                  В закладки
+                </button>
               </div>
             </div>
             <h3 class="card-title">Перфоратор BOSCH BFG 6000</h3>
@@ -251,8 +257,10 @@
               <img class="card-image" src="img/Perforator_1.jpg" alt="Перфоратор BOSCH BFG 2000" width="218"
                    height="170">
               <div class="card-buttons">
-                <button type="button" class="button-alternative">Купить</button>
-                <button type="button" class="button-alternative button-secondary">В закладки</button>
+                <button type="button" class="button-alternative" data-target="basket">Купить</button>
+                <button type="button" class="button-alternative button-secondary" data-target="bookmarks">
+                  В закладки
+                </button>
               </div>
             </div>
             <h3 class="card-title">Перфоратор BOSCH BFG 2000</h3>
@@ -261,7 +269,7 @@
         </ul>
       </section>
 
-      <section class="list-section">
+      <section>
         <div class="title-box">
           <h2 class="section-title">Популярные производители</h2>
           <a href="#" class="button">Все производители</a>
@@ -405,7 +413,7 @@
             <img src="img/map.png" alt="Большая Конюшенная ул., 19" width="300" height="158">
           </a>
 
-          <a href="#" class="button">Заблудились? Напишите нам!</a>
+          <a href="#" class="button" id="contact">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </div>
@@ -491,20 +499,20 @@
     </div>
   </footer>
 
-  <aside class="modal">
+  <aside class="modal" id="contactModal">
     <form method="post" action="https://echo.htmlacademy.ru" class="contact-form">
       <div class="form-container">
         <div class="form-text">
           <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="name" placeholder="Имя Фамилия">
+          <input type="text" id="name" name="name" placeholder="Имя Фамилия" required>
         </div>
         <div class="form-text">
           <label for="email">Ваш e-mail:</label>
-          <input type="email" id="email" name="email" placeholder="email@example.com">
+          <input type="email" id="email" name="email" placeholder="email@example.com" required>
         </div>
         <div class="form-text">
           <label for="text">Текст письма:</label>
-          <textarea id="text" name="text" rows="5" placeholder="В свободной форме"></textarea>
+          <textarea id="text" name="text" rows="5" placeholder="В свободной форме" required></textarea>
         </div>
       </div>
 
@@ -513,15 +521,35 @@
       </div>
     </form>
 
-    <button type="button" class="close-btn"><span class="visually-hidden">Закрыть</span></button>
+    <button type="button" class="close-btn" data-action="close"><span class="visually-hidden">Закрыть</span></button>
   </aside>
 
   <aside class="modal map" hidden>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.741309887234!2d30.31874187468214!3d59.93889136130221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1568555637026!5m2!1sru!2sua"
             width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 
-    <button type="button" class="close-btn"><span class="visually-hidden">Закрыть</span></button>
+    <button type="button" class="close-btn" data-action="close"><span class="visually-hidden">Закрыть</span></button>
   </aside>
 
+  <aside class="modal" id="basket">
+    <div class="modal-body">
+      <p class="modal-message">Товар добавлен в корзину!</p>
+    </div>
+
+    <ul class="button-container">
+      <li>
+        <a href="#" class="button">Оформить заказ</a>
+      </li>
+      <li>
+        <button type="button" class="button-secondary" data-action="close">Продолжить покупки</button>
+      </li>
+    </ul>
+
+    <button type="button" class="close-btn" data-action="close"><span class="visually-hidden">Закрыть</span></button>
+  </aside>
+
+  <script src="js/general.js"></script>
+  <script src="js/modal-contact.js"></script>
+  <script src="js/modal-map.js"></script>
   </body>
 </html>

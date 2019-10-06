@@ -259,6 +259,10 @@ img {
   padding-bottom: 12px;
 }
 
+.added {
+  background-color: #ee3643;
+}
+
 .head {
   padding-top: 47px;
   padding-bottom: 60px;
@@ -804,6 +808,7 @@ img {
   padding: 9px 0;
 
   text-align: center;
+  cursor: pointer;
 }
 
 .button-secondary,
@@ -898,7 +903,7 @@ img {
   opacity: 0.3;
 }
 
-.inner-page .list-section {
+.inner-page .cards-section {
   width: 700px;
 }
 
@@ -1752,8 +1757,6 @@ img {
 
 .modal {
   display: none;
-  margin-top: -215px;
-  margin-left: -310px;
   border-top: 7px solid #ee3643;
 
   position: fixed;
@@ -1761,15 +1764,23 @@ img {
   left: 50%;
   z-index: 100;
 
+  transform: translate(-50%, -50%);
+
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.75);
 }
 
 .modal.map {
-  margin-top: -223px;
-  margin-left: -470px;
   border-top: none;
 
   font-size: 0;
+}
+
+.modal.show {
+  display: block;
+
+  animation-name: show-modal;
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
 }
 
 .modal .button,
@@ -1899,5 +1910,15 @@ img {
 
 .contact-form .button {
   width: 100%;
+}
+
+@keyframes show-modal {
+  0% {
+    transform: translate(-2000px, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
 }
 
