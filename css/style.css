@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
   font-family: "Cuprum";
   src: local("Cuprum"),
@@ -50,6 +51,8 @@
   font-weight: bold;
 }
 
+
+/* Global */
 img {
   max-width: 100%;
   height: auto;
@@ -80,7 +83,6 @@ html {
   margin: -1px;
 }
 
-
 .flex-row {
   display: flex;
   justify-content: space-between;
@@ -91,6 +93,8 @@ html {
   justify-content: flex-start;
 }
 
+
+/* Header */
 .main-header {
   font-family: "Cuprum", "Arial", sans-serif;
 }
@@ -497,6 +501,8 @@ html {
   background-color: #1D2739;
 }
 
+
+/* Main */
 .main-content {
   padding-top: 59px;
   padding-bottom: 86px;
@@ -678,7 +684,14 @@ html {
   padding: 0;
 
   list-style: none;
-  transition: transform 200ms;
+}
+
+.gallery-row.first {
+  transform: translateX(0);
+}
+
+.gallery-row.second {
+  transform: translateX(-620px);
 }
 
 .gallery-slide {
@@ -944,6 +957,7 @@ html {
   align-items: center;
   padding: 25px 24px 25px 28px;
   margin-bottom: 20px;
+  margin-top: 2px;
 
   background-color: #F9F5F0;
 }
@@ -1323,7 +1337,8 @@ html {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
-.card:hover .card-buttons {
+.card:hover .card-buttons,
+.card-buttons.focused {
   z-index: 3;
 }
 
@@ -1333,6 +1348,7 @@ html {
 
 .manufacturers .card {
   min-height: 145px;
+  margin-bottom: 20px;
 }
 
 .link-card {
@@ -1348,10 +1364,6 @@ html {
 .card-image {
   position: relative;
   z-index: 2;
-}
-
-.card:hover .card-buttons {
-  display: block;
 }
 
 .card.new::after,
@@ -1456,7 +1468,7 @@ html {
 }
 
 .services {
-  padding-top: 70px;
+  padding-top: 64px;
   padding-bottom: 22px;
 
   background-color: #F4F8F9;
@@ -1467,7 +1479,7 @@ html {
 }
 
 .simple-text {
-  margin-top: 22px;
+  margin-top: 25px;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -1534,9 +1546,25 @@ html {
   background-color: #ffffff;
 }
 
+.service-body {
+  display: none;
+  max-width: 380px;
+  min-height: 220px;
+}
+
+.service-body.active {
+  display: block;
+}
+
+.service-body .button {
+  padding-left: 44px;
+  padding-right: 44px;
+  margin-top: 14px;
+}
+
 .service-title {
   margin-top: 54px;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
 
   font-weight: normal;
   font-size: 36px;
@@ -1547,12 +1575,12 @@ html {
 
 .service-bodies {
   margin-top: 0;
-  margin-bottom: 92px;
+  margin-bottom: 46px;
   padding: 0;
 }
 
 .bg-truck {
-  background: url("../img/truck.png") no-repeat 100% 112%;
+  background: url("../img/truck.png") no-repeat calc(100% - 10px) 112%;
 }
 
 .about {
@@ -1656,6 +1684,8 @@ html {
   background-color: #F4F8F9;
 }
 
+
+/* Footer */
 .main-footer {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
@@ -1789,6 +1819,8 @@ html {
   background-color: #EE3643;
 }
 
+
+/* Modal */
 .modal {
   display: none;
   border-top: 7px solid #ee3643;
@@ -1815,6 +1847,11 @@ html {
   animation-name: show-modal;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
+}
+
+.modal.error {
+  animation-name: error-modal;
+  animation-duration: 200ms;
 }
 
 .modal .button,
@@ -1946,11 +1983,35 @@ html {
   width: 100%;
 }
 
+
+/* Animations */
 @keyframes show-modal {
   0% {
     transform: translate(-2000px, -50%);
   }
 
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes error-modal {
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-51%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-49%, -50%);
+  }
+
+  0%,
   100% {
     transform: translate(-50%, -50%);
   }

@@ -20,6 +20,10 @@ cardsSection.addEventListener('click', function (evt) {
 
       if (clickTarget.dataset.target === 'basket') {
         modalBasket.classList.add('show');
+
+        let modalButton = modalBasket.querySelector('.button');
+
+        modalButton.focus();
       }
     }
 
@@ -35,10 +39,31 @@ modalBasket.addEventListener('click', function (evt) {
 
   while (clickTarget !== this) {
     if (clickTarget.dataset.action === 'close') {
-      this.classList.remove('show')
+      this.classList.remove('show');
     }
 
     clickTarget = clickTarget.parentNode;
+  }
+});
+
+
+let cardButtons = document.querySelectorAll('.card-buttons');
+
+cardsSection.addEventListener('focusin', function (evt) {
+  let focusTarget = evt.target;
+
+  while (focusTarget !== this) {
+    if (focusTarget.classList.contains('button-alternative')) {
+      focusTarget.parentNode.classList.add('focused');
+    }
+
+    focusTarget = focusTarget.parentNode;
+  }
+});
+
+cardsSection.addEventListener('focusout', function () {
+  for (let i = 0; i < cardButtons.length; i++) {
+    cardButtons[i].classList.remove('focused');
   }
 });
 
