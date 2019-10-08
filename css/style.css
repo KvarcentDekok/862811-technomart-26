@@ -77,10 +77,12 @@ html {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
   width: 1px;
   height: 1px;
-  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .flex-row {
@@ -1549,7 +1551,7 @@ html {
 .service-body {
   display: none;
   max-width: 380px;
-  min-height: 220px;
+  min-height: 260px;
 }
 
 .service-body.active {
@@ -1574,13 +1576,26 @@ html {
 }
 
 .service-bodies {
+  flex-grow: 1;
   margin-top: 0;
-  margin-bottom: 46px;
+  margin-bottom: 6px;
   padding: 0;
 }
 
+.service-bodies li {
+  width: 100%;
+}
+
 .bg-truck {
-  background: url("../img/truck.png") no-repeat calc(100% - 10px) 112%;
+  background: url("../img/truck.png") no-repeat 100% 26px;
+}
+
+.bg-medal {
+  background: url("../img/medal.png") no-repeat 100% 0;
+}
+
+.bg-credit {
+  background: url("../img/credit.png") no-repeat 100% 0;
 }
 
 .about {
@@ -1936,6 +1951,8 @@ html {
 
 .form-text textarea {
   width: 460px;
+
+  resize: none;
 }
 
 .form-text input,
