@@ -1917,8 +1917,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 620px; /*Edge, IE*/
-  width: min-content;
+  width: 620px;
   padding: 44px 80px 37px;
 
   background-color: #ffffff;
