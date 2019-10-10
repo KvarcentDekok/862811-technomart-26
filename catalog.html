@@ -5,14 +5,14 @@
   <title>Техномарт — каталог</title>
 
   <link rel="stylesheet" href="css/normalize.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="inner-page">
 <header class="main-header">
   <div class="top-menu">
     <div class="container flex-row">
       <a href="index.html" class="logo">
-        Техномарт
+        <img src="img/logo-technomart.svg" alt="Техномарт" width="118" height="auto">
       </a>
 
       <div class="nav-search">
@@ -34,8 +34,8 @@
   <div class="head">
     <div class="container flex-row">
       <p class="head-description">
-        Интернет-магазин строительных материалов<br>
-        и инструментов для ремонта
+        Интернет-магазин строительных материалов
+        и&nbsp;инструментов для ремонта
       </p>
 
       <div class="head-center">
@@ -166,8 +166,12 @@
           <div class="sub-block">
             <div class="range">
               <div class="range-bar">
-                <button type="button" class="range-control left"></button>
-                <button type="button" class="range-control right"></button>
+                <button type="button" class="range-control left">
+                  <span class="visually-hidden">Левый ползунок</span>
+                </button>
+                <button type="button" class="range-control right">
+                  <span class="visually-hidden">Правый ползунок</span>
+                </button>
                 <div class="range-progress"></div>
               </div>
             </div>
@@ -435,7 +439,9 @@
 <footer class="main-footer">
   <div class="container">
     <div class="flex-row">
-      <a href="index.html" class="logo">Техномарт</a>
+      <a href="index.html" class="logo">
+        <img src="img/logo-technomart.svg" alt="Техномарт" width="137" height="22">
+      </a>
       <ul class="menu">
         <li>
           <a href="#">Компания</a>
@@ -479,10 +485,10 @@
 
   <div class="bottom-footer">
     <div class="container flex-row">
-      <section>
+      <section class="copyright">
         <h2 class="visually-hidden">Копирайт</h2>
         <p>
-          © 2010–2019 Компания «Техномарт»<br>
+          © 2010–2019 Компания «Техномарт»
           Все права защищены
         </p>
       </section>

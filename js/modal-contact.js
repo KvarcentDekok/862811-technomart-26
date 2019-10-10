@@ -58,8 +58,8 @@ contactForm.addEventListener('submit', function (evt) {
 
   if (!nameInput.checkValidity() || !textInput.checkValidity() || !emailInput.checkValidity()) {
     evt.preventDefault();
-    console.log('error');
-    contactModal.classList.remove("error");
+
+    contactModal.classList.remove('error');
     contactModal.offsetWidth = contactModal.offsetWidth;
     contactModal.classList.add('error');
   } else {
@@ -68,12 +68,12 @@ contactForm.addEventListener('submit', function (evt) {
   }
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
   if (evt.code === 'Escape') {
     evt.preventDefault();
-    if (contactModal.classList.contains("show")) {
-      contactModal.classList.remove("show");
-      contactModal.classList.remove("error");
+    if (contactModal.classList.contains('show')) {
+      contactModal.classList.remove('show');
+      contactModal.classList.remove('error');
     }
   }
 });

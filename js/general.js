@@ -1,7 +1,7 @@
 let cardsSection = document.querySelector('.cards-section'),
   counters = {
-    "basket": 0,
-    "bookmarks": 0
+    'basket': 0,
+    'bookmarks': 0
   },
   bookmarksNumber = document.getElementById('bookmarks-number'),
   basketNumber = document.getElementById('basket-number'),
@@ -30,8 +30,8 @@ cardsSection.addEventListener('click', function (evt) {
     clickTarget = clickTarget.parentNode;
   }
 
-  bookmarksNumber.textContent = counters["bookmarks"];
-  basketNumber.textContent = counters["basket"];
+  bookmarksNumber.textContent = counters['bookmarks'];
+  basketNumber.textContent = counters['basket'];
 });
 
 modalBasket.addEventListener('click', function (evt) {
