@@ -682,16 +682,16 @@ html {
   text-align: center;
   vertical-align: middle;
 
-  background-color: rgba(229, 229, 229, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
 
 .promo-item a:hover {
-  background-color: rgba(204, 204, 204, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .promo-item a:active {
-  background-color: rgba(178, 178, 178, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .items-wrapper {
